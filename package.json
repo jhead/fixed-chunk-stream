@@ -1,0 +1,24 @@
+{
+  "name": "fixed-chunk-stream",
+  "version": "1.0.0",
+  "description": "Uses an internal buffer to provide fixed-sized data chunks from a readable stream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhead/fixed-chunk-stream.git"
+  },
+  "keywords": [
+    "fixed",
+    "chunk",
+    "stream"
+  ],
+  "author": "Justin Head",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhead/fixed-chunk-stream/issues"
+  },
+  "homepage": "https://github.com/jhead/fixed-chunk-stream#readme"
+}
