@@ -5,6 +5,8 @@ var Readable = require('stream').Readable;
 var FixedChunkStream = function (stream, options) {
   EventEmitter.call(this);
 
+  var self = this;
+
   if (!stream instanceof Readable)
     throw new Error('Provided stream must inherit from stream.Readable');
 
@@ -24,10 +26,10 @@ var FixedChunkStream = function (stream, options) {
   this.buffer = new Buffer(chunkSize);
   this.buffer.fill(0);
 
-  this.on('newListener', (e) => {
-    if (e === 'data' && this.paused) {
-      this.paused = false;
-      openStream.bind(this)();
+  this.on('newListener', function (e)  {
+    if (e === 'data' && self.paused) {
+      self.paused = false;
+      openStream.bind(self)();
     }
   });
 };
